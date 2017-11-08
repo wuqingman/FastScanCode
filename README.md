@@ -13,52 +13,51 @@ The effect：
 
 ## dependency
 
-> Gradle
-```
-compile 'cn.fanrunqi:avatarimageviewlibrary:1.0.1'
-```
-> Maven 
-```
-<dependency>
-  <groupId>cn.fanrunqi</groupId>
-  <artifactId>avatarimageviewlibrary</artifactId>
-  <version>1.0.1</version>
-  <type>pom</type>
-</dependency>
-```
+add [leoscanlibrary.aar](https://github.com/fanrunqi/FastScanCode/tree/master/app/libs) in your library folder.
 
-## layout
+add below Configuration in your build.gradle(Module:app)
 
 ```
-<cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/oval_shape"
-            <!--android:background="@drawable/bg_a"-->
-            android:src="@drawable/c"
-            />
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    ......
+    compile(name: 'leoscanlibrary', ext: 'aar')
+}
+```
+## in your activity 
+
+```
+public class xxxActivity extends CaptureActivity {
+
+
+......
+@Override
+    public void handleScanDecode(String result) {
+        Toast.makeText(this,result, Toast.LENGTH_SHORT).show();
+    }
+
+}
 ```
 
-> "android:background" attribute is Use to define the shape of the image.
-
-> you can use the shape.xml
+## activity layout file should 
 
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<shape
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval"
-    android:useLevel="false">
-    <solid android:color="#fff"/>
-    <size android:width="100dp"
-          android:height="100dp"/>
+......
 
-</shape>
+<include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/capture" />
+        
+........
 ```
 
-> or ,use a picture like [xxx.png](https://github.com/fanrunqi/AvatarImageView/blob/master/app/src/main/res/drawable/bg_a.png)
+> you can download this project demo to click detail information.
 
-> "android:src" attribute is Use to define the picture you want to show.
 
 # License
 > Copyright 2016 fanrunqi
