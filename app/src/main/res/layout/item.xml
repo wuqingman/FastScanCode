@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="center_vertical"
+    tools:context="cn.com.bobojing.scantest.ResultActivity">
+
+   <ImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:background="@drawable/timg"
+       android:layout_marginLeft="20dp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:maxEms="18"
+        android:id="@+id/tv_name"
+        />
+</RelativeLayout>
