@@ -46,7 +46,7 @@ public class ExtendScanActivity extends CaptureActivity {
     public void handleScanDecode(String result) {
         hs.add(result);
         Toast.makeText(this,result, Toast.LENGTH_SHORT).show();
-        tvNum.setText("已扫描 " + hs.size() + " 件商品");
+        tvNum.setText("已扫描 " + hs.size() + " 件");
     }
 
     @OnClick({R.id.goBack, R.id.ll_tool})

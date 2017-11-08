@@ -17,7 +17,7 @@
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="扫码购物"
+            android:text="扫码"
             android:textColor="#fff"
             android:textSize="18sp"
             />
@@ -60,7 +60,7 @@
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="已扫描 0 件商品"
+            android:text="已扫描 0 件"
             android:textColor="#fff"
             />
     </RelativeLayout>
