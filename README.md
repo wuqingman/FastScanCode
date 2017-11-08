@@ -3,6 +3,8 @@
 
 Very fast scan code project(support-qrcode-and-barcode)
 
+Can well support the following situations,barcodes folded ,the light is dark ,Distance is far and there still have a very impressive speed.
+
 
 The effect：
 
@@ -43,7 +45,7 @@ public class xxxActivity extends CaptureActivity {
 }
 ```
 
-## activity layout file should 
+## activity layout file
 
 ```
 ......
